@@ -151,9 +151,8 @@ The Underlying Language
 -----------------------
 
 The underlying language is an unsafe concurrent constraint logical language
-having one-shot logical variables.  All of the constraints that can be
-asserted are equations (for example, there will be no primitive to constrain bag
-membership).
+having one-shot logical variables.  The only (primitive) constraints that can be
+asserted are assignments of values to those variables.
 
 Programs in the underlying language can include class definitions.
 
@@ -162,8 +161,10 @@ It is possible at runtime to extract an instance of a class.
 The body of a method is a procedure rather than a function.
 
 Method heads and matching of calls to methods operates in the same way, except
-perhaps in regard to handling non-matches, as in the functional language.
-However, where in the functional language, method calls appear in an expression
+perhaps in regard to handling non-matches, as in the high-level functional
+language described above.
+However, where in the high-level functional language, method calls appear in an
+expression
 context, in the underlying language, method calls appear in a statement
 context.  Such calls are to be understood as being asserted to be true.
 
@@ -189,14 +190,9 @@ to determine the time taken by a communication or a calculation, or some
 similar capabilities, as may be determined by need.  These oracles constitute a
 sort of "god of the gaps".  The gaps they fill in are those between the inherent
 capabilities of the underlying languae, which at bottom can assert nothing but
-equations, and the necessary capabilities for simulating the actor language,
-which needs to be able to write constraints about bag membership, which, you
-may note, is not an equation.
-
-[Stuck here, because in fact a bag-membership constraint can be written as
-an equation, B2 = B1 U {e}.  I think I need to say something different about
-the underlying language, than that its constraints are all equations.  I want
-to explain that the underlying language is essentially a functional language.]
-
-[I have in mind how to resolve the above bracketed consideration, but I am
-stopping writing for the moment.]
+assignments to one-shots, and the necessary capabilities for simulating the
+actor language,
+which needs to be able to write constraints about bag membership (or something
+of equivalent power, e. g., the merging of two streams with indeterministic
+order), and capabilities of this sort will not be primitive in the underlying
+language as it would work if the oracles were not available.
