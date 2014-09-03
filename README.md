@@ -2,13 +2,21 @@ im_writing
 ==========
 
 The purpose of this repository is to hold ideas or documentation (but no code)
-for a suite of programming languages I'm trying to invent.
+for a stack of programming languages I'm trying to invent.
 
 The letters "im" in the repo name stood for Imperatrix Mundi, which I considered
 for the name of one of the languages.
 
-A major motivation for this project is to find a programming language suitable
-for orthogonal persistency.
+My first motivation for this project, historically, was to find a programming
+language suitable for orthogonal persistency.  GemStone DBMS amounted to
+Smalltalk on a disk, but Smalltalk has no natural transaction; moreover, it
+is imperative.
+
+In addition, I would like to have the same languages for programming a browser
+as for programming a web server.  Programming the server in Ruby for example
+and the browser in Javascript requires too much mental effort to switch
+gears; also it prevents moving or copying code between browsers and servers.
+And again, of course, those languages are imperative.
 
 Three Languages
 ---------------
@@ -113,7 +121,8 @@ A method body must end with an expression for the value that method will return.
 Ahead of that final expression, it is permissible to define intermediate results
 and give them names.
 
-The order of the definitions does not matter.  A defined name can be used in
+The order of the definitions does not matter.  A defined name can be used in a
+definition and/or in the final expression.  Recursion is allowed.
 
 If an operation gives rise to an error or an exception, the langauge expresses
 this as a result with a value that carries the fact of the error or exception
