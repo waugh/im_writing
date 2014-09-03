@@ -53,8 +53,8 @@ represented, but not necessarily in regard to the modes of the arguments in the
 sense of in which directions data can flow and whether splitting and merging
 are allowed and what such topological occurrences might mean.
 
-The Functional Language
------------------------
+The (high-level) Functional Language
+------------------------------------
 
 Everything that can be passed as an argument or returned as a result will
 represent a pure value.  It will not be possible in the high-level functional
