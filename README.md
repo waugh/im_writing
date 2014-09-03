@@ -109,7 +109,7 @@ A parameter is a word.
 When a call has the same verb as a method head, and supplies arguments whose
 keywords match (equal) the mandatory parameters, and supplies no arguments
 having keywords that are not parameters in the method head, then the
-method head matches the call.
+method head matches the call.  Otherwise, not.
 
 To include more than one method in a class, that can match the same call, is
 an error.
@@ -131,6 +131,18 @@ along with information about the context in which the error or exception
 occurred, including the location in the source code if feasible.
 
 Probably I should include a closure construct.
+
+There should be constructs to build arrays or lists or both, and records.  A
+record can be the same thing as a message, i. e. the content of a call leaving
+out the question of whom it is calling.  So a record would include a verb
+and some keywords with arguments.  Folling Van Roy and Oz/Mozart, we can say
+that a record without any keyword/argument pairs is the same thing as a symbol,
+which would be given as simply the verb.  If we extend the idea of concrete
+record to include an idea of a pattern record, the essence of a method head,
+we need only distinguish mandatory keywords from optional ones.  However, it
+is not my intent to put deep pattern matching in any of these langauges unless
+I find for some reason (yet unknown at the time of this writing) that they
+really can't work without it.
 
 When the actor language tries to call the functional language, arguments are
 checked to assure that they are acceptable to the functional language.
