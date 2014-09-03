@@ -97,7 +97,8 @@ A method may also be thought of as a rule.
 To field a method call, the system must find a method whose head matches to
 the call, or take some default for the absense of any match.
 
-What is the pattern language for the matching of calls to methods?
+What is the pattern language for the matching of calls to methods is
+characterized by the following assertions.
 
 A method head includes a "verb", which is a word.
 
